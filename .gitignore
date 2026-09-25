@@ -13,7 +13,9 @@ env/
 .ipynb_checkpoints/
 
 # Dataset
-dataset/
+dataset/student_resource
+dataset/test
+dataset/train
 
 # Generated outputs
 output/
