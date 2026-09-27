@@ -12,10 +12,23 @@ env/
 # Jupyter
 .ipynb_checkpoints/
 
-# Dataset
-dataset/student_resource
-dataset/test
-dataset/train
+# Dataset — raw and cleaned splits (too large for git)
+dataset/student_resource/
+dataset/test/
+dataset/train/
+dataset/cleaned/train/
+dataset/cleaned/test/
+
+# Computed embedding outputs (npy, npz) — too large
+dataset/cleaned/embeddings/source3_train/
+dataset/cleaned/embeddings/source3_test/
+
+# Shared TF-IDF models — TRACKED (small, ~14 MB total)
+# dataset/cleaned/embeddings/shared/ is intentionally NOT ignored
+
+# Sentinel files
+*.done
+_SUCCESS
 
 # Generated outputs
 output/
@@ -27,6 +40,12 @@ checkpoints/
 *.pth
 *.bin
 *.safetensors
+
+# Large data files (never commit these)
+*.npy
+*.npz
+*.tsv
+*.parquet
 
 # Logs
 *.log
